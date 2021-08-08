@@ -2,10 +2,6 @@ import json
 import os
 
 from task_interfaces import TaskInterface, SubscriptionLevels, TaskTypes
-from code_check import CodeCheck
-from task_interfaces import MetaTaskInterface
-from task_interfaces import SubscriptionLevels
-
 
 class Task(TaskInterface):
     """
