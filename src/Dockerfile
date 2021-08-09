@@ -2,6 +2,7 @@ FROM public.ecr.aws/lambda/python:3.8 as deps
 
 RUN yum install -y git
 
+ARG GITHUB_TOKEN
 COPY requirements.txt .
 RUN python3.8 -m pip install -r requirements.txt
 

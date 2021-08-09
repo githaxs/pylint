@@ -17,8 +17,9 @@ class Task(TaskInterface):
     actions = None
     subscription_level = SubscriptionLevels.FREE
     type = TaskTypes.CODE_FORMAT
-    source_script_path="%s/task.sh" % os.path.dirname(__file__),
-    handler = "task"
+
+    command = "PYLINTHOME=/tmp pylint"
+    file_filters = ".*.py$"
 
     def execute(self, github_body, settings) -> bool:
         pass
