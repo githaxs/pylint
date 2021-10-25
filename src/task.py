@@ -15,11 +15,12 @@ class Task(TaskInterface):
     fail_summary = "All files not formatted correctly."
     fail_text = ""
     actions = None
+    can_fix = False
     subscription_level = SubscriptionLevels.FREE
     type = TaskTypes.CODE_FORMAT
 
-    command = "PYLINTHOME=/tmp pylint"
-    file_filters = ".*.py$"
+    source_script_path = "%s/task.sh" % os.path.dirname(__file__)
+    handler = "task"
 
     def execute(self, github_body, settings) -> bool:
         pass

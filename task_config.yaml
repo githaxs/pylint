@@ -1,11 +1,14 @@
+version: v2
 name: Pylint
 slug: pylint
 type: content
-description: |
-  Fill me out
-parameters:
-  - name: foo
-    description: bar
+summary: Code analysis for Python
+description: Code analysis for Python
+beta: true
+default_configuration:
+  installation:
+    repo_languages:
+      - Python
 subscribed_events:
   - pull_request.opened
   - pull_request.reopened
