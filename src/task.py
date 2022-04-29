@@ -3,6 +3,7 @@ import os
 
 from task_interfaces import StaticAnalysisTask, SubscriptionLevels
 
+
 class Task(StaticAnalysisTask):
     """
     Runs pylint on files.
